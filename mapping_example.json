@@ -1,0 +1,162 @@
+{
+  "fr": {
+    "P\u00e9destre": {
+      "pictogram": "picto_1.png",
+      "matches": [
+        "T400",
+        "T401",
+        "T402"
+      ],
+      "id": "T1"
+    },
+    "Bureau d'information touristique": {
+      "pictogram": "picto_2.jpg",
+      "matches": [
+        "C1500"
+      ],
+      "id": "C2",
+      "type1_label": "Label",
+      "type2_label": "Utilisation"
+    },
+    "Restauration": {
+      "pictogram": "picto_3.svg",
+      "matches": [
+        "C500",
+        "C501"
+      ],
+      "id": "C3",
+      "type1_label": "Type",
+      "type2_label": "Accessibilité"
+    },
+    "H\u00e9bergements": {
+      "pictogram": "picto_3.png",
+      "matches": [
+        "C1000",
+        "C102"
+      ],
+      "id": "C4",
+      "type1_label": "",
+      "type2_label": ""
+    },
+    "Patrimoines culturels": {
+      "pictogram": "picto_4.png",
+      "matches": [
+        "C1400",
+        "C1302"
+      ],
+      "id": "C5",
+      "type1_label": "",
+      "type2_label": ""
+    },
+    "Equipements de loisirs": {
+      "pictogram": null,
+      "matches": [
+        "C1300"
+      ],
+      "id": "C6",
+      "type1_label": "",
+      "type2_label": ""
+    },
+    "Produits locaux": {
+      "pictogram": "picto_5.png",
+      "matches": [
+        "C1200",
+        "C601",
+        "C1002"
+      ],
+      "id": "C1",
+      "type1_label": "",
+      "type2_label": ""
+    },
+    "Activit\u00e9s sportives": {
+      "pictogram": "picto_6.png",
+      "matches": [
+        "C1100"
+      ],
+      "id": "C8",
+      "type1_label": "",
+      "type2_label": ""
+    },
+    "V\u00e9lo": {
+      "pictogram": "picto_7.png",
+      "matches": [
+        "T200",
+        "T100",
+        "T101",
+        "T102",
+        "T202"
+      ],
+      "id": "T2"
+    },
+    "Cheval": {
+      "pictogram": "picto_8.svg",
+      "matches": [
+        "T300",
+        "T301",
+        "T302"
+      ],
+      "id": "T3"
+    },
+    "\u00c9v\u00e8nements touristiques": {
+      "pictogram": "/static/tourism/touristicevent.svg",
+      "matches": [
+        "E"
+      ],
+      "id": "E"
+    },
+    "Organisme de Tourisme": {
+      "pictogram": "picto_9.svg",
+      "matches": [
+        "C901",
+        "C902"
+      ],
+      "id": "C9",
+      "type1_label": "",
+      "type2_label": ""
+    },
+    "Pleine Nature": {
+      "pictogram": "picto_10.svg",
+      "matches": [
+        "C201"
+      ],
+      "id": "C10",
+      "type1_label": "",
+      "type2_label": ""
+    },
+    "S\u00e9jours": {
+      "pictogram": "picto_11.svg",
+      "matches": [
+        "C701"
+      ],
+      "id": "C11",
+      "type1_label": "",
+      "type2_label": ""
+    },
+    "Sites recommand\u00e9s": {
+      "pictogram": "picto_12.svg",
+      "matches": [
+        "C401"
+      ],
+      "id": "C12",
+      "type1_label": "",
+      "type2_label": ""
+    },
+    "Sorties": {
+      "pictogram": "picto_13.svg",
+      "matches": [
+        "C301"
+      ],
+      "id": "C13",
+      "type1_label": "",
+      "type2_label": ""
+    },
+    "Trail": {
+      "pictogram": "picto_14.png",
+      "matches": [
+        "T201",
+        "T602"
+      ],
+      "id": "T5"
+    }
+  }
+}
