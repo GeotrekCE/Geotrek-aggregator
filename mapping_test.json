@@ -1,0 +1,122 @@
+{
+  "fr": {
+    "P\u00e9destre": {
+      "pictogram": null,
+      "matches": [
+        "T100",
+        "T402",
+        "T403"
+      ],
+      "id": "T1"
+    },
+    "VTT": {
+      "pictogram": null,
+      "matches": [
+        "T200",
+        "T102",
+        "T103"
+      ],
+      "id": "T2"
+    },
+    "Équestre": {
+      "pictogram": null,
+      "matches": [
+        "T300",
+        "T302",
+        "T303"
+      ],
+      "id": "T3"
+    },
+    "Séjours": {
+      "pictogram": "/static/trekking/itinerancy.svg",
+      "matches": [
+        "I",
+        "C701",
+      ],
+      "id": "I"
+    },
+    "Trail": {
+      "pictogram": null,
+      "matches": [
+        "T5001"
+      ],
+      "id": "T4"
+    },
+    "H\u00e9bergements - Restauration": {
+      "pictogram": null,
+      "matches": [
+        "C100",
+        "C102",
+        "C103"
+      ],
+      "id": "C1",
+      "type1_label": "",
+      "type2_label": ""
+    },
+    "Information - Services": {
+      "pictogram": null,
+      "matches": [
+        "C902",
+        "C903"
+      ],
+      "id": "C2",
+      "type1_label": "",
+      "type2_label": ""
+    },
+    "Musée": {
+      "pictogram": null,
+      "matches": [
+        "C1300"
+      ],
+      "id": "C3",
+      "type1_label": "",
+      "type2_label": ""
+    },
+    "Pleine nature": {
+      "pictogram": null,
+      "matches": [
+        "C201"
+      ],
+      "id": "C4",
+      "type1_label": "",
+      "type2_label": ""
+    },
+    "Producteurs et Artisans": {
+      "pictogram": null,
+      "matches": [
+        "C601",
+        "C602",
+        "C1003"
+      ],
+      "id": "C5",
+      "type1_label": "",
+      "type2_label": ""
+    },
+    "Sites recommandés": {
+      "pictogram": null,
+      "matches": [
+        "C401"
+      ],
+      "id": "C6",
+      "type1_label": "",
+      "type2_label": ""
+    },
+    "Sorties accompagnées": {
+      "pictogram": null,
+      "matches": [
+        "C301",
+        "C302"
+      ],
+      "id": "C7",
+      "type1_label": "",
+      "type2_label": ""
+    },
+    "Patrimoine culturel": {
+      "pictogram": null,
+      "matches": [
+        "C1303"
+      ],
+      "id": "C8"
+    }
+  }
+}
