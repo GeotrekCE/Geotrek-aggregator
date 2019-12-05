@@ -18,9 +18,9 @@ schema = {
 merger = Merger(schema)
 
 
-def transform_id(key, obj, i, lang, file):
-    if key and key.get('themes', None):
-        themes = key.get('themes')
+def transform_id(previous_dict, obj, i, lang, file):
+    if previous_dict and previous_dict.get('themes', None):
+        themes = previous_dict.get('themes')
         for element in obj:
             element['id'] = element['id'] * 100 + i
             fix_mapping_themes(element, lang)
