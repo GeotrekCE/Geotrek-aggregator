@@ -62,6 +62,97 @@
         "THEME503"
       ],
       "id": "2"
+    },
+    "Col et sommet": {
+      "pictogram": null,
+      "matches": [
+        "THEME900",
+        "THEME1201",
+        "THEME901",
+        "THEME902",
+        "THEME903"
+      ],
+      "id": "3"
+    },
+    "Faune": {
+      "pictogram": null,
+      "matches": [
+        "THEME100",
+        "THEME101",
+        "THEME102",
+        "THEME103"
+      ],
+      "id": "4"
+    },
+    "Flore et forêt": {
+      "pictogram": null,
+      "matches": [
+        "THEME200",
+        "THEME201",
+        "THEME202",
+        "THEME2903",
+        "THEME203"
+      ],
+      "id": "5"
+    },
+    "Géologie": {
+      "pictogram": null,
+      "matches": [
+        "THEME700",
+        "THEME701",
+        "THEME702",
+        "THEME1103"
+      ],
+      "id": "6"
+    },
+    "Eau": {
+      "pictogram": null,
+      "matches": [
+        "THEME800",
+        "THEME801",
+        "THEME802",
+        "THEME1803"
+      ],
+      "id": "7"
+    },
+    "Pastoralisme": {
+      "pictogram": null,
+      "matches": [
+        "THEME600",
+        "THEME601",
+        "THEME602",
+        "THEME603"
+      ],
+      "id": "8"
+    },
+    "Point de vue": {
+      "pictogram": null,
+      "matches": [
+        "THEME400",
+        "THEME401",
+        "THEME402",
+        "THEME403"
+      ],
+      "id": "9"
+    },
+    "Refuge": {
+      "pictogram": null,
+      "matches": [
+        "THEME1000",
+        "THEME1001",
+        "THEME1002",
+        "THEME1003"
+      ],
+      "id": "10"
+    },
+    "Savoir faire": {
+      "pictogram": null,
+      "matches": [
+        "THEME1502",
+        "THEME1402",
+        "THEME1903"
+      ],
+      "id": "9"
     }
   }
 }
