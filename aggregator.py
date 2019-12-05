@@ -46,6 +46,11 @@ def transform_id(key, obj, i, lang, file):
     elif isinstance(obj, (list, tuple)):
         for element in obj:
             transform_id(None, element, i, lang, file)
+        obj = remove_duplicates(obj)
+
+
+def remove_duplicates(obj):
+    return list(set(obj))
 
 
 def fix_mapping(obj, lang):
