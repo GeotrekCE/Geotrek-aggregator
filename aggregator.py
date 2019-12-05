@@ -19,10 +19,14 @@ merger = Merger(schema)
 
 
 def transform_id(key, obj, i, lang, file):
-    if key and key == 'themes':
+    if key and key.get('themes', None):
+        themes = key.get('themes')
         for element in obj:
             element['id'] = element['id'] * 100 + i
             fix_mapping_themes(element, lang)
+            if obj['id'] in themes:
+                print(obj)
+                themes.remove(obj)
     elif isinstance(obj, dict):
         if "id" in obj:
             if isinstance(obj['id'], int):
@@ -35,8 +39,7 @@ def transform_id(key, obj, i, lang, file):
                     add_id = str(i).zfill(2)
                     obj['id'] = obj['id'] + add_id
                     fix_mapping(obj, lang)
-            if isinstance(key, (list, tuple)) and obj['id'] in key:
-                key.remove(obj)
+
         if "category_id" in obj:
             if not 'E' in obj['category_id']:
                 add_id = str(i).zfill(2)
@@ -44,10 +47,10 @@ def transform_id(key, obj, i, lang, file):
                 fix_mapping(obj, lang)
 
         for key, value in obj.items():
-            transform_id(key, value, i, lang, file)
+            transform_id(obj, value, i, lang, file)
     elif isinstance(obj, (list, tuple)):
         for n, element in enumerate(obj):
-            transform_id(obj, element, i, lang, file)
+            transform_id(None, element, i, lang, file)
 
 
 def fix_mapping(obj, lang):
