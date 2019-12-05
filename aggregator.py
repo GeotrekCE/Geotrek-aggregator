@@ -18,15 +18,13 @@ schema = {
 merger = Merger(schema)
 
 
-def transform_id(previous_dict, key, obj, i, lang):
+def transform_id(key, obj, i, lang):
     if key and key == 'themes':
-        themes = previous_dict.get('themes')
-        for element in obj:
+        for n, element in enumerate(obj):
             element['id'] = element['id'] * 100 + i
             fix_mapping_themes(element, lang)
-            if element['id'] in themes:
-                print(element)
-                themes.remove(obj)
+            if element in obj[:n]:
+                obj.remove(element)
     elif isinstance(obj, dict):
         if "id" in obj:
             if isinstance(obj['id'], int):
@@ -45,10 +43,10 @@ def transform_id(previous_dict, key, obj, i, lang):
                 fix_mapping(obj, lang)
 
         for key, value in obj.items():
-            transform_id(obj, key, value, i, lang)
+            transform_id(key, value, i, lang)
     elif isinstance(obj, (list, tuple)):
         for n, element in enumerate(obj):
-            transform_id(None, None, element, i, lang)
+            transform_id(None, element, i, lang)
 
 
 def fix_mapping(obj, lang):
@@ -171,7 +169,7 @@ for i, initial_directory in enumerate(args.directories):
                 if file.endswith(".geojson") or file.endswith(".json"):
                     with open(os.path.join(root, file)) as f:
                         data = json.load(f)
-                        transform_id(None, None, data, i, lang)
+                        transform_id(None, data, i, lang)
                         transform_file_string(data, i, lang)
                     if data:
                         write_files_new_place(initial_directory, root, file, args.target, i, data)
