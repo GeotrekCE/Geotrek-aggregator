@@ -24,7 +24,8 @@ def transform_id(previous_dict, key, obj, i, lang):
         for element in obj:
             element['id'] = element['id'] * 100 + i
             fix_mapping_themes(element, lang)
-            if obj['id'] in themes:
+            if element['id'] in themes:
+                print(element)
                 themes.remove(obj)
     elif isinstance(obj, dict):
         if "id" in obj:
