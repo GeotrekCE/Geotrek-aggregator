@@ -23,7 +23,7 @@ def transform_id(key, obj, i, lang):
         for n, element in enumerate(obj):
             element['id'] = element['id'] * 100 + i
             fix_mapping_themes(element, lang)
-            if element in obj[:n]:
+            if element['id'] in [l['id'] for l in obj[:n]]:
                 obj.remove(element)
     elif isinstance(obj, dict):
         if "id" in obj:
