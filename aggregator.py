@@ -44,14 +44,12 @@ def transform_id(key, obj, i, lang, file):
         for key, value in obj.items():
             transform_id(key, value, i, lang, file)
     elif isinstance(obj, (list, tuple)):
-        for element in obj:
+        for n, element in enumerate(obj):
             transform_id(None, element, i, lang, file)
-        obj = remove_duplicates(obj)
-
-
-def remove_duplicates(obj):
-    return list(set(obj))
-
+        for n, element in enumerate(obj):
+            if element in obj[:n] and isinstance(element, dict):
+                print(element)
+                obj.remove(element)
 
 def fix_mapping(obj, lang):
     for key, value in json_mapping[lang].items():
