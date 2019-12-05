@@ -18,11 +18,18 @@ schema = {
 merger = Merger(schema)
 
 
-def transform_id(obj, i, lang):
-    if isinstance(obj, dict):
+def transform_id(key, obj, i, lang, file):
+    if key and key == 'themes':
+        for element in obj:
+            element['id'] = element['id'] * 100 + i
+            fix_mapping_themes(element, lang)
+    elif isinstance(obj, dict):
         if "id" in obj:
             if isinstance(obj['id'], int):
                 obj['id'] = obj['id'] * 100 + i
+
+                if file == 'themes.json':
+                    fix_mapping_themes(obj, lang)
             else:
                 if not 'E' in obj['id']:
                     add_id = str(i).zfill(2)
@@ -35,10 +42,10 @@ def transform_id(obj, i, lang):
                 fix_mapping(obj, lang)
 
         for key, value in obj.items():
-            transform_id(value, i, lang)
+            transform_id(key, value, i, lang, file)
     elif isinstance(obj, (list, tuple)):
         for element in obj:
-            transform_id(element, i, lang)
+            transform_id(None, element, i, lang, file)
 
 
 def fix_mapping(obj, lang):
@@ -56,6 +63,17 @@ def fix_mapping(obj, lang):
                 obj['category_id'] = value['id']
                 break
         except KeyError as e:
+            pass
+
+
+def fix_mapping_themes(obj, lang):
+    for key, value in json_mapping[lang].items():
+        try:
+            if 'THEME{}'.format(obj['id']) in value['matches']:
+                obj['label'] = key
+                obj['id'] = value['id']
+                obj['pictogram'] = value['pictogram']
+        except KeyError:
             pass
 
 
@@ -150,7 +168,7 @@ for i, initial_directory in enumerate(args.directories):
                 if file.endswith(".geojson") or file.endswith(".json"):
                     with open(os.path.join(root, file)) as f:
                         data = json.load(f)
-                        transform_id(data, i, lang)
+                        transform_id(None, data, i, lang, file)
                         transform_file_string(data, i, lang)
                     if data:
                         write_files_new_place(initial_directory, root, file, args.target, i, data)
