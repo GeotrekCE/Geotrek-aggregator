@@ -20,11 +20,14 @@ merger = Merger(schema)
 
 def transform_id(key, obj, i, lang):
     if key and key == 'themes':
+        element_to_rem = []
         for n, element in enumerate(obj):
             element['id'] = element['id'] * 100 + i
             fix_mapping_themes(element, lang)
             if element['id'] in [l['id'] for l in obj[:n]]:
-                obj.remove(element)
+                element_to_rem.append(element)
+        for elem in element_to_rem:
+            obj.remove(elem)
     elif isinstance(obj, dict):
         if "id" in obj:
             if isinstance(obj['id'], int):
