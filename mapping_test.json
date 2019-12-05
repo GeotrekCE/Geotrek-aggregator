@@ -33,7 +33,7 @@
     "Séjours": {
       "pictogram": "/static/trekking/itinerancy.svg",
       "matches": [
-        "T500",
+        "T500"
       ],
       "id": "T5"
     },
