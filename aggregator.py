@@ -35,6 +35,8 @@ def transform_id(key, obj, i, lang, file):
                     add_id = str(i).zfill(2)
                     obj['id'] = obj['id'] + add_id
                     fix_mapping(obj, lang)
+            if isinstance(key, (list, tuple)) and obj['id'] in key:
+                key.remove(obj)
         if "category_id" in obj:
             if not 'E' in obj['category_id']:
                 add_id = str(i).zfill(2)
@@ -45,11 +47,8 @@ def transform_id(key, obj, i, lang, file):
             transform_id(key, value, i, lang, file)
     elif isinstance(obj, (list, tuple)):
         for n, element in enumerate(obj):
-            transform_id(None, element, i, lang, file)
-        for n, element in enumerate(obj):
-            if element in obj[:n] and isinstance(element, dict):
-                print(element)
-                obj.remove(element)
+            transform_id(obj, element, i, lang, file)
+
 
 def fix_mapping(obj, lang):
     for key, value in json_mapping[lang].items():
