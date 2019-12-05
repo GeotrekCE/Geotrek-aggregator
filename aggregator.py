@@ -46,7 +46,7 @@ def transform_id(key, obj, i, lang):
                 fix_mapping(obj, lang)
         if "slug" in obj:
             add_id = str(i).zfill(2)
-            obj['id'] = obj['id'] + add_id
+            obj['slug'] = obj['slug'] + add_id
         for key, value in obj.items():
             transform_id(key, value, i, lang)
     elif isinstance(obj, (list, tuple)):
