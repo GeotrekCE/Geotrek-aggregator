@@ -34,7 +34,6 @@
       "pictogram": "/static/trekking/itinerancy.svg",
       "matches": [
         "T500",
-        "C701"
       ],
       "id": "T5"
     },
@@ -45,6 +44,24 @@
         "T801"
       ],
       "id": "T4"
+    },
+    "Archéologie": {
+      "pictogram": null,
+      "matches": [
+        "THEME1100",
+        "THEME1101"
+      ],
+      "id": "1"
+    },
+    "Patrimoine et histoire": {
+      "pictogram": null,
+      "matches": [
+        "THEME500",
+        "THEME501",
+        "THEME502",
+        "THEME503"
+      ],
+      "id": "2"
     }
   }
 }
