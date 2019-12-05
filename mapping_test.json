@@ -1,7 +1,7 @@
 {
   "fr": {
     "P\u00e9destre": {
-      "pictogram": null,
+      "pictogram": "upload/practice-foot_j2Y78Ty.svg",
       "matches": [
         "T100",
         "T401",
@@ -11,7 +11,7 @@
       "id": "T1"
     },
     "VTT": {
-      "pictogram": null,
+      "pictogram": "/upload/practice-mountainbike_JjPlpdM.svg",
       "matches": [
         "T200",
         "T201",
@@ -21,7 +21,7 @@
       "id": "T2"
     },
     "Équestre": {
-      "pictogram": null,
+      "pictogram": "/upload/practice-horse_b7AhZJu.svg",
       "matches": [
         "T300",
         "T301",
@@ -38,7 +38,7 @@
       "id": "T5"
     },
     "Trail": {
-      "pictogram": null,
+      "pictogram": "/upload/practice-trail.png",
       "matches": [
         "T501",
         "T801"
@@ -46,7 +46,7 @@
       "id": "T4"
     },
     "Archéologie": {
-      "pictogram": null,
+      "pictogram": "/upload/theme-archeologie.png",
       "matches": [
         "THEME1100",
         "THEME1101"
@@ -54,7 +54,7 @@
       "id": "1"
     },
     "Patrimoine et histoire": {
-      "pictogram": null,
+      "pictogram": "/media/upload/PATRIMOINE.png",
       "matches": [
         "THEME500",
         "THEME501",
@@ -64,7 +64,7 @@
       "id": "2"
     },
     "Col et sommet": {
-      "pictogram": null,
+      "pictogram": "/media/upload/sommet_1.svg",
       "matches": [
         "THEME900",
         "THEME1201",
@@ -75,7 +75,7 @@
       "id": "3"
     },
     "Faune": {
-      "pictogram": null,
+      "pictogram": "/media/upload/FAUNE.png",
       "matches": [
         "THEME100",
         "THEME101",
@@ -85,7 +85,7 @@
       "id": "4"
     },
     "Flore et forêt": {
-      "pictogram": null,
+      "pictogram": "/media/upload/theme-flora.png",
       "matches": [
         "THEME200",
         "THEME201",
@@ -96,7 +96,7 @@
       "id": "5"
     },
     "Géologie": {
-      "pictogram": null,
+      "pictogram": "/media/upload/theme-history.png",
       "matches": [
         "THEME700",
         "THEME701",
@@ -106,7 +106,7 @@
       "id": "6"
     },
     "Eau": {
-      "pictogram": null,
+      "pictogram": "/media/upload/EAU.png",
       "matches": [
         "THEME800",
         "THEME801",
@@ -116,7 +116,7 @@
       "id": "7"
     },
     "Pastoralisme": {
-      "pictogram": null,
+      "pictogram": "/media/upload/theme-pastoral.png",
       "matches": [
         "THEME600",
         "THEME601",
@@ -126,7 +126,7 @@
       "id": "8"
     },
     "Point de vue": {
-      "pictogram": null,
+      "pictogram": "/media/upload/theme-panorama.png",
       "matches": [
         "THEME400",
         "THEME401",
@@ -136,7 +136,7 @@
       "id": "9"
     },
     "Refuge": {
-      "pictogram": null,
+      "pictogram": "/media/upload/REFUGE.png",
       "matches": [
         "THEME1000",
         "THEME1001",
@@ -146,7 +146,7 @@
       "id": "10"
     },
     "Savoir faire": {
-      "pictogram": null,
+      "pictogram": "/media/upload/agri_savoir_faire_1.svg",
       "matches": [
         "THEME1502",
         "THEME1402",
