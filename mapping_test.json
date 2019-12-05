@@ -1,7 +1,7 @@
 {
   "fr": {
     "P\u00e9destre": {
-      "pictogram": "upload/practice-foot_j2Y78Ty.svg",
+      "pictogram": "/media/upload/practice-foot_j2Y78Ty.svg",
       "matches": [
         "T100",
         "T401",
@@ -11,7 +11,7 @@
       "id": "T1"
     },
     "VTT": {
-      "pictogram": "/upload/practice-mountainbike_JjPlpdM.svg",
+      "pictogram": "/media/upload/practice-mountainbike_JjPlpdM.svg",
       "matches": [
         "T200",
         "T201",
@@ -21,7 +21,7 @@
       "id": "T2"
     },
     "Équestre": {
-      "pictogram": "/upload/practice-horse_b7AhZJu.svg",
+      "pictogram": "/media/upload/practice-horse_b7AhZJu.svg",
       "matches": [
         "T300",
         "T301",
@@ -38,7 +38,7 @@
       "id": "T5"
     },
     "Trail": {
-      "pictogram": "/upload/practice-trail.png",
+      "pictogram": "/media/upload/practice-trail.png",
       "matches": [
         "T501",
         "T801"
@@ -46,7 +46,7 @@
       "id": "T4"
     },
     "Archéologie": {
-      "pictogram": "/upload/theme-archeologie.png",
+      "pictogram": "/media/upload/theme-archeologie.png",
       "matches": [
         "THEME1100",
         "THEME1101"
