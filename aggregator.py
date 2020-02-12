@@ -18,7 +18,7 @@ schema = {
 merger = Merger(schema)
 
 
-def transform_id(key, obj, i, lang):
+def transform_id(key, obj, i, lang, file):
     if key and key == 'themes':
         element_to_rem = []
         for n, element in enumerate(obj):
@@ -28,6 +28,9 @@ def transform_id(key, obj, i, lang):
                 element_to_rem.append(element)
         for elem in element_to_rem:
             obj.remove(elem)
+    if key and key == 'route' and obj is not None:
+        obj['id'] = obj['id'] * 100 + i
+        fix_mapping_route(obj, lang)
     elif isinstance(obj, dict):
         if "id" in obj:
             if isinstance(obj['id'], int):
@@ -48,10 +51,10 @@ def transform_id(key, obj, i, lang):
             add_id = str(i).zfill(2)
             obj['slug'] = obj['slug'] + add_id
         for key, value in obj.items():
-            transform_id(key, value, i, lang)
+            transform_id(key, value, i, lang, file)
     elif isinstance(obj, (list, tuple)):
         for n, element in enumerate(obj):
-            transform_id(None, element, i, lang)
+            transform_id(None, element, i, lang, file)
 
 
 def fix_mapping(obj, lang):
@@ -76,6 +79,17 @@ def fix_mapping_themes(obj, lang):
     for key, value in json_mapping[lang].items():
         try:
             if 'THEME{}'.format(obj['id']) in value['matches']:
+                obj['label'] = key
+                obj['id'] = value['id']
+                obj['pictogram'] = value['pictogram']
+        except KeyError:
+            pass
+
+
+def fix_mapping_route(obj, lang):
+    for key, value in json_mapping[lang].items():
+        try:
+            if 'ROUTE{}'.format(obj['id']) in value['matches']:
                 obj['label'] = key
                 obj['id'] = value['id']
                 obj['pictogram'] = value['pictogram']
@@ -174,7 +188,7 @@ for i, initial_directory in enumerate(args.directories):
                 if file.endswith(".geojson") or file.endswith(".json"):
                     with open(os.path.join(root, file)) as f:
                         data = json.load(f)
-                        transform_id(None, data, i, lang)
+                        transform_id(None, data, i, lang, file)
                         transform_file_string(data, i, lang)
                     if data:
                         write_files_new_place(initial_directory, root, file, args.target, i, data)
