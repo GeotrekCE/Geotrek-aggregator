@@ -50,6 +50,22 @@ def transform_id(key, obj, i, lang, file):
         if "slug" in obj:
             add_id = str(i).zfill(2)
             obj['slug'] = obj['slug'] + add_id
+        if "children" in obj:
+            obj['children'] = [x * 100 + i for x in obj['children']]
+        if "parents" in obj:
+            obj['parents'] = [x * 100 + i for x in obj['parents']]
+        if "next" in obj and obj['next']:
+            add_id = str(i).zfill(2)
+            if list(obj['next'].values())[0]:
+                obj['next'] = {list(obj['next'].keys())[0] + add_id: list(obj['next'].values())[0] * 100 + i}
+            else:
+                obj['next'] = {list(obj['next'].keys())[0] + add_id: None}
+        if "previous" in obj and obj['previous']:
+            add_id = str(i).zfill(2)
+            if list(obj['previous'].values())[0]:
+                obj['previous'] = {list(obj['previous'].keys())[0] + add_id: list(obj['previous'].values())[0] * 100 + i}
+            else:
+                obj['previous'] = {list(obj['previous'].keys())[0] + add_id: None}
         for key, value in obj.items():
             transform_id(key, value, i, lang, file)
     elif isinstance(obj, (list, tuple)):
