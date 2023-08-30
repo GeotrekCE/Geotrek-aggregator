@@ -134,8 +134,9 @@ def write_files_new_place(initial_directory, directory_api, filename, target_dir
     file_place_in = directory_api.replace(initial_directory, '')
     add_id = str(id).zfill(2)
     f_place_in_after = re.sub('/([0-9]+)', '/\\g<1>{}'.format(add_id), file_place_in)
-
-    file_path_after = os.path.join(target_directory, f_place_in_after[1:], filename)
+    if f_place_in_after[0] == '/':
+        f_place_in_after = f_place_in_after[1:]
+    file_path_after = os.path.join(target_directory, f_place_in_after, filename)
     mkdirs(file_path_after)
 
     if isinstance(data, (list, tuple, dict)):
